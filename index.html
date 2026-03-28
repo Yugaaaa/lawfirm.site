@@ -1,1472 +1,1472 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAW FIRM - Premium Legal Solutions</title>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <title>Subramaniam &amp; Associates — Premier Law Firm, Coimbatore</title>
   <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --navy-light: #1a3358;
+      --slate: #8892a4;
+      --slate-light: #b0bac8;
+      --gold: #b8953a;
+      --gold-light: #d4af6a;
+      --white: #f4f4f2;
+      --off-white: #e8e4dc;
     }
 
-    html, body {
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body, .app-root {
       height: 100%;
       width: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #0f1529 100%);
-      overflow-x: hidden;
-    }
-
-    :root {
-      --primary: #1e3a8a;
-      --primary-light: #3b82f6;
-      --accent: #00d9ff;
-      --gold: #d4af37;
-      --gold-light: #f4e4a8;
-      --white: #ffffff;
-      --dark: #0f172a;
-      --gray-light: #e8ecf1;
-      --text: #e2e8f0;
-      --purple: #7c3aed;
-      --pink: #ec4899;
-      --cyan: #06b6d4;
-    }
-
-    /* Scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 12px;
-    }
-    ::-webkit-scrollbar-track {
-      background: rgba(30, 58, 138, 0.1);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-      border-radius: 6px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(135deg, var(--cyan) 0%, var(--gold) 100%);
     }
 
     body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
     }
 
-    .app-wrapper {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+    .app-root {
       overflow-y: auto;
-      background: linear-gradient(180deg, #0a0e27 0%, #1a1a3e 40%, #2a1a4e 70%, #0f1529 100%);
-      position: relative;
+      overflow-x: hidden;
     }
 
-    /* Animated background elements */
-    .app-wrapper::before {
-      content: '';
+    h1, h2, h3, .serif {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* NAV */
+    .nav-bar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: -1;
-      animation: gradientShift 15s ease infinite;
-    }
-
-    @keyframes gradientShift {
-      0%, 100% { 
-        background: 
-          radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.15) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 40% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-      }
-      50% { 
-        background: 
-          radial-gradient(circle at 80% 20%, rgba(0, 217, 255, 0.2) 0%, transparent 50%),
-          radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-          radial-gradient(circle at 60% 100%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
-      }
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      backdrop-filter: blur(20px);
-      background: rgba(10, 14, 39, 0.85);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-      padding: 1rem 2rem;
-      box-shadow: 0 8px 32px rgba(0, 217, 255, 0.1);
-      animation: slideDown 0.6s ease-out;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10, 22, 40, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(184, 149, 58, 0.18);
+      padding: 0 3rem;
+      height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s ease;
     }
 
-    .logo {
-      font-family: 'Georgia', serif;
-      font-size: 1.8rem;
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
       font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 50%, var(--pink) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 2px;
-      animation: glowPulse 3s ease-in-out infinite;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
     }
 
-    @keyframes glowPulse {
-      0%, 100% { 
-        filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.3));
-      }
-      50% { 
-        filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.6)) drop-shadow(0 0 30px rgba(212, 175, 55, 0.3));
-      }
+    .nav-logo span {
+      color: var(--white);
+      font-weight: 400;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       list-style: none;
     }
 
     .nav-links a {
-      text-decoration: none;
-      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
       font-weight: 500;
-      font-size: 0.95rem;
-      position: relative;
-      transition: all 0.3s ease;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
-      transition: width 0.3s ease;
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
-    }
+    .nav-links a:hover { color: var(--gold-light); }
 
-    .nav-links a:hover {
-      color: var(--accent);
-      text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .cta-btn {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      color: var(--dark);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
+    .nav-cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
       font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--gold);
+      border: none;
+      padding: 0.65rem 1.5rem;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+      transition: background 0.2s ease;
+    }
+
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* HERO */
+    .hero-section {
       position: relative;
-      overflow: hidden;
-    }
-
-    .cta-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: left 0.4s ease;
-    }
-
-    .cta-btn:hover::before {
-      left: 100%;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(0, 217, 255, 0.6);
-    }
-
-    /* Hero Section */
-    .hero {
-      margin-top: 80px;
-      padding: 100px 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      min-height: 650px;
+      min-height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      background: var(--navy);
     }
 
-    .hero::before {
-      content: '';
+    .hero-bg {
       position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0, 217, 255, 0.25) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: float 20s infinite ease-in-out;
-      z-index: 0;
-      filter: blur(40px);
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(17,34,64,0.95) 0%, rgba(10,22,40,1) 70%),
+        linear-gradient(135deg, #0a1628 0%, #1a3358 50%, #0a1628 100%);
     }
 
-    .hero::after {
-      content: '';
+    .hero-pattern {
       position: absolute;
-      bottom: -20%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: float-reverse 25s infinite ease-in-out;
-      z-index: 0;
-      filter: blur(40px);
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(184,149,58,0.6) 39px, rgba(184,149,58,0.6) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(184,149,58,0.6) 39px, rgba(184,149,58,0.6) 40px);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) translateX(0px); }
-      25% { transform: translateY(-50px) translateX(20px); }
-      50% { transform: translateY(-100px) translateX(-20px); }
-      75% { transform: translateY(-50px) translateX(20px); }
-    }
-
-    @keyframes float-reverse {
-      0%, 100% { transform: translateY(0px) translateX(0px); }
-      25% { transform: translateY(50px) translateX(-20px); }
-      50% { transform: translateY(100px) translateX(20px); }
-      75% { transform: translateY(50px) translateX(-20px); }
+    .hero-scales {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      opacity: 0.03;
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      animation: fadeInUp 1s ease-out;
+      z-index: 2;
+      text-align: center;
+      max-width: 860px;
+      padding: 8rem 2rem 4rem;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero h1 {
-      font-family: 'Georgia', serif;
-      font-size: 4.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 50%, var(--pink) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .hero-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
       margin-bottom: 1.5rem;
-      line-height: 1.2;
-      letter-spacing: -1px;
-      animation: titleGlow 3s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
 
-    @keyframes titleGlow {
-      0%, 100% { 
-        filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.3));
-        text-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
-      }
-      50% { 
-        filter: drop-shadow(0 0 40px rgba(0, 217, 255, 0.6));
-        text-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
-      }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
     }
 
-    .hero p {
-      font-size: 1.3rem;
-      color: var(--text);
-      margin-bottom: 3rem;
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title .accent { color: var(--gold-light); }
+
+    .hero-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
       line-height: 1.8;
-      animation: fadeInUp 1.2s ease-out;
+      color: var(--slate-light);
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+      letter-spacing: 0.03em;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      animation: fadeInUp 1.4s ease-out;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      color: var(--dark);
-      border: none;
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
       font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--gold);
+      border: none;
+      padding: 1rem 2.2rem;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: left 0.4s ease;
-      z-index: 1;
-    }
-
-    .btn-primary:hover::before {
-      left: 100%;
+      transition: background 0.25s ease, transform 0.2s ease;
     }
 
     .btn-primary:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 10px 40px rgba(0, 217, 255, 0.7);
+      background: var(--gold-light);
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
       background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
+      border: 1px solid rgba(184,149,58,0.45);
+      padding: 1rem 2.2rem;
       cursor: pointer;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-secondary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(124, 58, 237, 0.2));
-      transition: left 0.4s ease;
-      z-index: 0;
-    }
-
-    .btn-secondary:hover::before {
-      left: 0;
+      transition: all 0.25s ease;
     }
 
     .btn-secondary:hover {
-      background: rgba(0, 217, 255, 0.1);
-      color: var(--white);
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+      border-color: var(--gold-light);
+      background: rgba(184,149,58,0.08);
     }
 
-    /* Stats Section */
-    .stats {
-      padding: 80px 2rem;
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
+    .hero-divider {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,149,58,0.3), transparent);
+    }
+
+    /* TRUST BANNER */
+    .trust-banner {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(184,149,58,0.2);
+      border-bottom: 1px solid rgba(184,149,58,0.2);
+      padding: 2.5rem 3rem;
+    }
+
+    .trust-grid {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      position: relative;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
     }
 
-    .stat-card {
+    .trust-item {
       text-align: center;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      transition: all 0.3s ease;
-      animation: slideUp 0.8s ease-out backwards;
+      padding: 1rem;
+      border-right: 1px solid rgba(184,149,58,0.15);
     }
 
-    .stat-card:nth-child(1) { animation-delay: 0.1s; }
-    .stat-card:nth-child(2) { animation-delay: 0.2s; }
-    .stat-card:nth-child(3) { animation-delay: 0.3s; }
-    .stat-card:nth-child(4) { animation-delay: 0.4s; }
+    .trust-item:last-child { border-right: none; }
 
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .stat-card:hover {
-      transform: translateY(-10px);
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--accent);
-      box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
-    }
-
-    .stat-number {
-      font-family: 'Georgia', serif;
-      font-size: 3rem;
+    .trust-number {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
       font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-      animation: countUp 2s ease-out;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 0.4rem;
     }
 
-    @keyframes countUp {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .stat-label {
-      color: var(--text);
-      font-size: 1rem;
+    .trust-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
       font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
     }
 
-    /* Practice Areas */
-    .practice-areas {
-      padding: 100px 2rem;
-      max-width: 1400px;
+    .trust-sub {
+      font-size: 0.6rem;
+      color: rgba(184,149,58,0.6);
+      margin-top: 0.2rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 6rem 3rem;
+      max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .section-full {
+      padding: 6rem 3rem;
+    }
+
+    .section-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-eyebrow::after {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
     }
 
     .section-title {
-      font-family: 'Georgia', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 50%, var(--pink) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      font-weight: 600;
+      color: var(--white);
       margin-bottom: 1rem;
-      animation: fadeInUp 0.8s ease-out;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
     }
 
-    .section-subtitle {
-      text-align: center;
-      color: var(--text);
-      font-size: 1.1rem;
-      margin-bottom: 4rem;
-      animation: fadeInUp 1s ease-out;
+    .section-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--slate-light);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* PRACTICE AREAS */
+    .practice-bg {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%);
     }
 
     .practice-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: rgba(184,149,58,0.12);
     }
 
     .practice-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      border-radius: 20px;
-      padding: 2.5rem;
+      background: rgba(10, 22, 40, 0.95);
       backdrop-filter: blur(20px);
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      cursor: pointer;
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(184,149,58,0.1);
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      animation: fadeInUp 0.8s ease-out backwards;
     }
-
-    .practice-card:nth-child(1) { animation-delay: 0.05s; }
-    .practice-card:nth-child(2) { animation-delay: 0.1s; }
-    .practice-card:nth-child(3) { animation-delay: 0.15s; }
-    .practice-card:nth-child(4) { animation-delay: 0.2s; }
-    .practice-card:nth-child(5) { animation-delay: 0.25s; }
-    .practice-card:nth-child(6) { animation-delay: 0.3s; }
 
     .practice-card::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(0, 217, 255, 0.3) 0%, transparent 70%);
-      border-radius: 50%;
-      transition: all 0.4s ease;
-      z-index: 0;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
+      transition: height 0.3s ease;
     }
 
-    .practice-card::after {
-      content: '';
-      position: absolute;
-      bottom: -50%;
-      left: -50%;
-      width: 150px;
-      height: 150px;
-      background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
-      transition: all 0.4s ease;
-      z-index: 0;
-    }
-
-    .practice-card:hover::before {
-      top: -10%;
-      right: -10%;
-      background: radial-gradient(circle, rgba(0, 217, 255, 0.5) 0%, transparent 70%);
-    }
-
-    .practice-card:hover::after {
-      bottom: -10%;
-      left: -10%;
-      background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%);
-    }
+    .practice-card:hover::before { height: 100%; }
 
     .practice-card:hover {
-      transform: translateY(-15px) scale(1.02);
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--accent);
-      box-shadow: 0 30px 60px rgba(0, 217, 255, 0.25);
+      background: rgba(17,34,64,0.98);
+      border-color: rgba(184,149,58,0.25);
     }
 
     .practice-icon {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      color: var(--white);
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+      width: 42px;
+      height: 42px;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      opacity: 0.85;
     }
 
-    .practice-card:hover .practice-icon {
-      transform: scale(1.15) rotate(-5deg);
-      box-shadow: 0 15px 40px rgba(0, 217, 255, 0.5);
-    }
-
-    .practice-title {
-      font-family: 'Georgia', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .practice-desc {
-      color: var(--text);
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
+    .practice-card h3 {
+      font-family: 'Cinzel', serif;
       font-size: 0.95rem;
-    }
-
-    /* Team Section */
-    .team-section {
-      padding: 100px 2rem;
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-
-    .team-card {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      overflow: hidden;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      position: relative;
-      animation: fadeInUp 0.8s ease-out backwards;
-    }
-
-    .team-card:nth-child(1) { animation-delay: 0.05s; }
-    .team-card:nth-child(2) { animation-delay: 0.1s; }
-    .team-card:nth-child(3) { animation-delay: 0.15s; }
-    .team-card:nth-child(4) { animation-delay: 0.2s; }
-    .team-card:nth-child(5) { animation-delay: 0.25s; }
-    .team-card:nth-child(6) { animation-delay: 0.3s; }
-
-    .team-card:hover {
-      transform: translateY(-15px) rotateY(2deg);
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--accent);
-      box-shadow: 0 30px 60px rgba(0, 217, 255, 0.25);
-    }
-
-    .team-avatar {
-      width: 100%;
-      height: 280px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      color: var(--gold);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .team-avatar::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), transparent);
-      animation: shimmer 3s infinite;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .team-avatar::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      transition: all 0.4s ease;
-      z-index: 1;
-    }
-
-    .team-card:hover .team-avatar::after {
-      top: -10%;
-      right: -10%;
-    }
-
-    .team-info {
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .team-name {
-      font-family: 'Georgia', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-    }
-
-    .team-role {
-      color: var(--gold);
       font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.05em;
     }
 
-    .team-spec {
-      color: var(--text);
-      font-size: 0.9rem;
-      line-height: 1.6;
+    .practice-card p {
+      font-size: 0.78rem;
+      line-height: 1.8;
+      color: var(--slate);
+      font-weight: 300;
     }
 
-    /* Contact Section */
-    .contact-section {
-      padding: 100px 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
+    /* ATTORNEYS */
+    .attorneys-bg {
+      background: var(--navy-mid);
     }
 
-    .contact-container {
+    .attorney-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
 
-    .contact-item {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 15px;
+    .attorney-card {
+      background: rgba(255,255,255,0.03);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      transition: all 0.3s ease;
-      animation: slideInLeft 0.6s ease-out backwards;
+      border: 1px solid rgba(184,149,58,0.12);
+      overflow: hidden;
+      transition: all 0.35s ease;
     }
 
-    .contact-item:nth-child(1) { animation-delay: 0.1s; }
-    .contact-item:nth-child(2) { animation-delay: 0.2s; }
-    .contact-item:nth-child(3) { animation-delay: 0.3s; }
-    .contact-item:nth-child(4) { animation-delay: 0.4s; }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+    .attorney-card:hover {
+      border-color: rgba(184,149,58,0.3);
+      transform: translateY(-4px);
     }
 
-    .contact-item:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--accent);
-      transform: translateX(8px);
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
-    }
-
-    .contact-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      border-radius: 12px;
+    .attorney-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, #1a2a44 0%, #0d1e35 100%);
+      position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
-      flex-shrink: 0;
-      box-shadow: 0 8px 20px rgba(0, 217, 255, 0.3);
-      transition: all 0.3s ease;
     }
 
-    .contact-item:hover .contact-icon {
-      transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 12px 30px rgba(0, 217, 255, 0.5);
-    }
-
-    .contact-text h3 {
-      font-family: 'Georgia', serif;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    .contact-text p {
-      color: var(--text);
-      font-size: 0.95rem;
-    }
-
-    .contact-form {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 2.5rem;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 217, 255, 0.2);
+    .attorney-photo-inner {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%);
       display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      animation: slideInRight 0.6s ease-out;
-      box-shadow: 0 20px 60px rgba(0, 217, 255, 0.1);
+      align-items: center;
+      justify-content: center;
     }
 
-    @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+    .attorney-initials {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(184,149,58,0.25);
+      letter-spacing: 0.1em;
+    }
+
+    .attorney-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(transparent, rgba(10,22,40,0.95));
+    }
+
+    .attorney-info {
+      padding: 1.5rem;
+    }
+
+    .attorney-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+
+    .attorney-title {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .attorney-spec {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--slate);
+      font-weight: 300;
+    }
+
+    .attorney-bar {
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1rem 0;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(184,149,58,0.1);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      line-height: 0.8;
+      color: rgba(184,149,58,0.2);
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.82rem;
+      line-height: 1.9;
+      color: var(--slate-light);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .testimonial-role {
+      font-size: 0.68rem;
+      color: var(--slate);
+      margin-top: 0.2rem;
+    }
+
+    /* CONTACT */
+    .contact-bg {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin-bottom: 1.8rem;
+    }
+
+    .contact-detail-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-text {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--slate-light);
+    }
+
+    .contact-hours {
+      border-top: 1px solid rgba(184,149,58,0.15);
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-hours h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-hours p {
+      font-size: 0.78rem;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+
+    /* FORM */
+    .contact-form {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(184,149,58,0.15);
+      padding: 2.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
     }
 
     .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .form-group label {
+      display: block;
+      font-size: 0.65rem;
       font-weight: 600;
-      color: var(--accent);
-      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 0.5rem;
     }
 
     .form-group input,
+    .form-group select,
     .form-group textarea {
-      padding: 0.75rem 1rem;
-      border: 1.5px solid rgba(0, 217, 255, 0.2);
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(184,149,58,0.2);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.2s ease;
     }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: rgba(226, 232, 240, 0.5);
+      color: rgba(136,146,164,0.5);
     }
 
     .form-group input:focus,
+    .form-group select:focus,
     .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.15);
+      border-color: rgba(184,149,58,0.5);
+    }
+
+    .form-group select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .form-group select option {
+      background: var(--navy-mid);
+      color: var(--white);
     }
 
     .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
+      resize: none;
+      min-height: 100px;
     }
 
-    .form-submit {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
-      color: var(--dark);
-      border: none;
-      padding: 1rem;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-      margin-top: 1rem;
-      box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
-      position: relative;
-      overflow: hidden;
+    .form-disclaimer {
+      font-size: 0.65rem;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
     }
 
-    .form-submit::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: left 0.4s ease;
-      z-index: 0;
+    /* FOOTER */
+    .footer {
+      background: #070f1c;
+      border-top: 1px solid rgba(184,149,58,0.15);
+      padding: 3rem;
     }
 
-    .form-submit:hover::before {
-      left: 100%;
-    }
-
-    .form-submit:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(0, 217, 255, 0.5);
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(26, 26, 62, 0.95) 100%);
-      color: var(--white);
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-top: 4rem;
-      border-top: 1px solid rgba(0, 217, 255, 0.2);
-      box-shadow: 0 -10px 40px rgba(0, 217, 255, 0.1);
-      animation: slideUp 0.8s ease-out;
-    }
-
-    .footer-content {
-      max-width: 1400px;
+    .footer-inner {
+      max-width: 1200px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(184,149,58,0.1);
     }
 
     .footer-logo {
-      font-family: 'Georgia', serif;
-      font-size: 1.5rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
       font-weight: 700;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-bottom: 0.8rem;
     }
 
-    .footer-text {
-      color: rgba(226, 232, 240, 0.9);
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
+    .footer-logo span { color: var(--white); font-weight: 400; }
+
+    .footer-desc {
+      font-size: 0.75rem;
+      line-height: 1.8;
+      color: var(--slate);
+      max-width: 260px;
     }
 
-    .footer-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.3), transparent);
-      margin: 2rem 0;
+    .footer-col h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
     }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.75rem;
+      color: var(--slate);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col ul li a:hover { color: var(--gold-light); }
 
     .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.9rem;
-      color: rgba(226, 232, 240, 0.8);
     }
 
-    .footer-links {
+    .footer-copy {
+      font-size: 0.68rem;
+      color: rgba(136,146,164,0.5);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-bar {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 0.5rem;
+      align-items: center;
     }
 
-    .footer-links a {
-      color: rgba(226, 232, 240, 0.8);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      position: relative;
+    .footer-bar span {
+      width: 3px;
+      height: 3px;
+      background: var(--gold);
+      opacity: 0.5;
+      border-radius: 50%;
     }
 
-    .footer-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
+    /* SCROLL ANIMATIONS */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .fade-in.visible { opacity: 1; }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    .stagger-6 { transition-delay: 0.6s; }
+
+    /* GOLD DIVIDER */
+    .gold-line {
+      width: 48px;
       height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 2rem;
     }
 
-    .footer-links a:hover {
-      color: var(--accent);
+    /* FORM SUCCESS */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
     }
 
-    .footer-links a:hover::after {
-      width: 100%;
+    .form-success.show { display: block; }
+
+    /* MOBILE MENU TOGGLE */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--white);
+      padding: 0.25rem;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        gap: 1rem;
-        font-size: 0.85rem;
-      }
+    @media (max-width: 900px) {
+      .mobile-menu-btn { display: flex; }
+      .nav-desktop { display: none; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .practice-grid { grid-template-columns: 1fr 1fr; }
+      .attorney-grid { grid-template-columns: 1fr 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
 
-      .hero {
-        padding: 60px 1rem;
-        margin-top: 70px;
-        min-height: auto;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn-primary, .btn-secondary {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-
-      .practice-grid {
-        gap: 1.5rem;
-      }
-
-      .team-grid {
-        gap: 1.5rem;
-      }
-
-      .stats {
-        gap: 1.5rem;
-      }
+    @media (max-width: 600px) {
+      .nav-bar { padding: 0 1.5rem; }
+      .section { padding: 4rem 1.5rem; }
+      .section-full { padding: 4rem 1.5rem; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .practice-grid { grid-template-columns: 1fr; }
+      .attorney-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+      .trust-banner { padding: 2rem 1.5rem; }
+      .contact-form { padding: 1.8rem; }
+      .trust-item { border-right: none; border-bottom: 1px solid rgba(184,149,58,0.1); }
     }
   </style>
   <style>body { box-sizing: border-box; }</style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body>
-  <div class="app-wrapper">
-   <!-- Navigation -->
-   <nav>
-    <div class="nav-container">
-     <div class="logo" id="firmName">
-      LAW FIRM
-     </div>
-     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#practice">Practice Areas</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
-     </ul><button class="cta-btn">Consult Now</button>
+  <div class="app-root"><!-- NAVIGATION -->
+   <nav class="nav-bar">
+    <div class="nav-logo" id="nav-logo-text">
+     Subramaniam <span>&amp; Associates</span>
     </div>
-   </nav><!-- Hero Section -->
-   <section class="hero" id="home">
+    <ul class="nav-links nav-desktop">
+     <li><a href="#practice">Practice Areas</a></li>
+     <li><a href="#attorneys">Our Team</a></li>
+     <li><a href="#testimonials">Recognition</a></li>
+     <li><a href="#contact">Contact</a></li>
+    </ul><button class="nav-cta nav-desktop" id="nav-cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Consultation</button> <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
+   </nav><!-- Mobile menu -->
+   <div id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(10,22,40,0.98); z-index:99; padding:2rem; border-bottom:1px solid rgba(184,149,58,0.2);">
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:1.5rem;">
+     <li><a href="#practice" onclick="toggleMobileMenu()" style="font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate-light);text-decoration:none;">Practice Areas</a></li>
+     <li><a href="#attorneys" onclick="toggleMobileMenu()" style="font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate-light);text-decoration:none;">Our Team</a></li>
+     <li><a href="#testimonials" onclick="toggleMobileMenu()" style="font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate-light);text-decoration:none;">Recognition</a></li>
+     <li><a href="#contact" onclick="toggleMobileMenu()" style="font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate-light);text-decoration:none;">Contact</a></li>
+    </ul>
+   </div><!-- HERO -->
+   <section style="min-height:100%; padding-top:72px; position:relative;" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div><!-- Decorative legal scales SVG -->
+    <svg class="hero-scales" viewbox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="30" r="4" fill="white" /> <line x1="100" y1="30" x2="100" y2="160" stroke="white" stroke-width="2" /> <line x1="40" y1="70" x2="160" y2="70" stroke="white" stroke-width="2" /> <circle cx="40" cy="70" r="3" fill="white" /> <circle cx="160" cy="70" r="3" fill="white" /> <ellipse cx="40" cy="105" rx="28" ry="8" stroke="white" stroke-width="1.5" fill="none" /> <line x1="12" y1="105" x2="40" y2="70" stroke="white" stroke-width="1.5" /> <line x1="68" y1="105" x2="40" y2="70" stroke="white" stroke-width="1.5" /> <ellipse cx="160" cy="112" rx="28" ry="8" stroke="white" stroke-width="1.5" fill="none" /> <line x1="132" y1="112" x2="160" y2="70" stroke="white" stroke-width="1.5" /> <line x1="188" y1="112" x2="160" y2="70" stroke="white" stroke-width="1.5" /> <line x1="80" y1="160" x2="120" y2="160" stroke="white" stroke-width="2" /> <line x1="100" y1="10" x2="100" y2="30" stroke="white" stroke-width="2" />
+    </svg>
     <div class="hero-content">
-     <h1 id="heroTitle">Justice Meets Innovation</h1>
-     <p id="heroSubtitle">Premium Legal Solutions for Corporate &amp; Criminal Law</p>
-     <div class="hero-buttons">
-      <button class="btn-primary">Schedule Consultation</button> <button class="btn-secondary">Learn More</button>
+     <div class="hero-eyebrow fade-up" id="hero-eyebrow-text">
+      Established Counsel · Coimbatore, Tamil Nadu
+     </div>
+     <h1 class="hero-title fade-up stagger-1" id="hero-main-title">Unwavering Advocacy.<br><span class="accent">Proven Results</span><br>
+      in Tamil Nadu.</h1>
+     <p class="hero-subtitle fade-up stagger-2" id="hero-sub-text">Premier legal representation across civil, corporate, and criminal matters. Decades of experience before the Madurai High Court Bench and Coimbatore District Courts.</p>
+     <div class="hero-buttons fade-up stagger-3"><button class="btn-primary" id="hero-cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Confidential Consultation</button> <button class="btn-secondary" onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">Explore Practice Areas</button>
      </div>
     </div>
-   </section><!-- Stats Section -->
-   <section class="stats">
-    <div class="stat-card">
-     <div class="stat-number">
-      500+
-     </div>
-     <div class="stat-label">
-      Cases Won
-     </div>
-    </div>
-    <div class="stat-card">
-     <div class="stat-number">
-      25+
-     </div>
-     <div class="stat-label">
-      Years Experience
-     </div>
-    </div>
-    <div class="stat-card">
-     <div class="stat-number">
-      1000+
-     </div>
-     <div class="stat-label">
-      Clients Served
-     </div>
-    </div>
-    <div class="stat-card">
-     <div class="stat-number">
-      99%
-     </div>
-     <div class="stat-label">
-      Success Rate
-     </div>
-    </div>
-   </section><!-- Practice Areas -->
-   <section class="practice-areas" id="practice">
-    <h2 class="section-title">Our Practice Areas</h2>
-    <p class="section-subtitle">Specialized Legal Expertise Across Multiple Domains</p>
-    <div class="practice-grid">
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="briefcase" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Corporate Law</h3>
-       <p class="practice-desc">Expert guidance on mergers, acquisitions, regulatory compliance, and corporate governance. We help businesses navigate complex legal landscapes with strategic precision.</p>
+    <div class="hero-divider"></div>
+   </section><!-- TRUST BANNER -->
+   <div class="trust-banner">
+    <div class="trust-grid">
+     <div class="trust-item fade-in stagger-1">
+      <div class="trust-number">
+       28+
+      </div>
+      <div class="trust-label">
+       Years of Practice
+      </div>
+      <div class="trust-sub">
+       Since 1997
       </div>
      </div>
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="shield-alert" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Criminal Law</h3>
-       <p class="practice-desc">Robust criminal defense with proven track record. We protect your rights with meticulous preparation, strategic advocacy, and unwavering commitment to justice.</p>
+     <div class="trust-item fade-in stagger-2">
+      <div class="trust-number">
+       1,400+
+      </div>
+      <div class="trust-label">
+       Cases Resolved
+      </div>
+      <div class="trust-sub">
+       Across Tamil Nadu
       </div>
      </div>
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="home" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Property Law</h3>
-       <p class="practice-desc">Comprehensive real estate solutions covering purchases, sales, disputes, and title transfers. We ensure all transactions are legally sound and properly documented.</p>
+     <div class="trust-item fade-in stagger-3">
+      <div class="trust-number">
+       96%
+      </div>
+      <div class="trust-label">
+       Client Satisfaction
+      </div>
+      <div class="trust-sub">
+       Verified Reviews
       </div>
      </div>
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="zap" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Intellectual Property</h3>
-       <p class="practice-desc">Protect your intellectual assets with our IP expertise. Patents, trademarks, copyrights—we safeguard innovation and enforce your rights globally.</p>
+     <div class="trust-item fade-in stagger-4">
+      <div class="trust-number">
+       100%
       </div>
-     </div>
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="users" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Family Law</h3>
-       <p class="practice-desc">Sensitive and professional handling of divorces, custody, inheritance, and family disputes. We prioritize your family's best interests with compassion and expertise.</p>
+      <div class="trust-label">
+       Client Confidentiality
       </div>
-     </div>
-     <div class="practice-card">
-      <div>
-       <div class="practice-icon">
-        <i data-lucide="file-text" style="width: 30px; height: 30px;"></i>
-       </div>
-       <h3 class="practice-title">Contract Law</h3>
-       <p class="practice-desc">Drafting, reviewing, and negotiating contracts that protect your interests. We ensure legal clarity and enforceability in every agreement.</p>
+      <div class="trust-sub">
+       Guaranteed
       </div>
      </div>
     </div>
-   </section><!-- Team Section -->
-   <section class="team-section" id="team">
-    <div>
-     <h2 class="section-title">Meet Our Team</h2>
-     <p class="section-subtitle">Experienced Legal Professionals Dedicated to Your Success</p>
-     <div class="team-grid">
-      <div class="team-card">
-       <div class="team-avatar">
-        👨‍⚖️
-       </div>
-       <div class="team-info">
-        <div class="team-name">
-         Rajesh Kumar
-        </div>
-        <div class="team-role">
-         Senior Partner
-        </div>
-        <div class="team-spec">
-         25+ years in Corporate &amp; Mergers &amp; Acquisitions
-        </div>
-       </div>
+   </div><!-- PRACTICE AREAS -->
+   <section class="section-full practice-bg" id="practice">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+     <div class="section-eyebrow fade-up">
+      Our Expertise
+     </div>
+     <h2 class="section-title fade-up stagger-1">Practice Areas</h2>
+     <p class="section-desc fade-up stagger-2">Comprehensive legal services delivered with precision, discretion, and an unwavering commitment to justice across all domains of law.</p>
+    </div>
+    <div style="max-width:1200px; margin:0 auto; padding:0 3rem 6rem;">
+     <div class="practice-grid">
+      <div class="practice-card fade-up stagger-1"><i data-lucide="briefcase" class="practice-icon"></i>
+       <h3>Corporate Litigation</h3>
+       <p>Representing corporations and businesses in complex commercial disputes, shareholder disagreements, contractual breaches, and regulatory proceedings before all forums.</p>
       </div>
-      <div class="team-card">
-       <div class="team-avatar">
-        👩‍⚖️
-       </div>
-       <div class="team-info">
-        <div class="team-name">
-         Priya Sharma
-        </div>
-        <div class="team-role">
-         Criminal Law Specialist
-        </div>
-        <div class="team-spec">
-         18+ years defending high-profile criminal cases
-        </div>
-       </div>
+      <div class="practice-card fade-up stagger-2"><i data-lucide="scale" class="practice-icon"></i>
+       <h3>Civil Litigation</h3>
+       <p>Expert advocacy in property disputes, injunctions, recovery suits, and civil wrongs. Meticulous preparation of plaints, written statements, and appellate briefs.</p>
       </div>
-      <div class="team-card">
-       <div class="team-avatar">
-        👨‍⚖️
-       </div>
-       <div class="team-info">
-        <div class="team-name">
-         Arjun Menon
-        </div>
-        <div class="team-role">
-         IP &amp; Technology Counsel
-        </div>
-        <div class="team-spec">
-         15+ years in Intellectual Property protection
-        </div>
-       </div>
+      <div class="practice-card fade-up stagger-3"><i data-lucide="shield" class="practice-icon"></i>
+       <h3>Criminal Defense</h3>
+       <p>Vigorous defense in Sessions Courts and High Court Bench, covering bail applications, anticipatory bail, and full trial representation for all categories of offences.</p>
       </div>
-      <div class="team-card">
-       <div class="team-avatar">
-        👩‍⚖️
-       </div>
-       <div class="team-info">
-        <div class="team-name">
-         Neha Patel
-        </div>
-        <div class="team-role">
-         Family &amp; Estate Attorney
-        </div>
-        <div class="team-spec">
-         12+ years handling sensitive family matters
-        </div>
-       </div>
+      <div class="practice-card fade-up stagger-1"><i data-lucide="home" class="practice-icon"></i>
+       <h3>Family Law</h3>
+       <p>Compassionate and strategic counsel in matrimonial matters, divorce proceedings, child custody, maintenance claims, and adoption under applicable personal laws.</p>
       </div>
-      <div class="team-card">
-       <div class="team-avatar">
-        👨‍⚖️
-       </div>
-       <div class="team-info">
-        <div class="team-name">
-         Vikram Singh
-        </div>
-        <div class="team-role">
-         Real Estate Specialist
-        </div>
-        <div class="team-spec">
-         14+ years in Property &amp; Land transactions
-        </div>
-       </div>
+      <div class="practice-card fade-up stagger-2"><i data-lucide="building-2" class="practice-icon"></i>
+       <h3>Real Estate &amp; Property</h3>
+       <p>Title verification, sale deed drafting, partition suits, encroachment disputes, and registration matters across Coimbatore and western Tamil Nadu districts.</p>
       </div>
-      <div class="team-card">
-       <div class="team-avatar">
-        👩‍⚖️
+      <div class="practice-card fade-up stagger-3"><i data-lucide="landmark" class="practice-icon"></i>
+       <h3>Constitutional &amp; Writ</h3>
+       <p>Filing and arguing writ petitions before the Madurai Bench of the Madras High Court in matters of fundamental rights, service law, and administrative law.</p>
+      </div>
+      <div class="practice-card fade-up stagger-1"><i data-lucide="users" class="practice-icon"></i>
+       <h3>Labour &amp; Employment</h3>
+       <p>Industrial disputes, wrongful termination, ESIC/PF matters, and management-side advisory before Labour Courts and the Industrial Tribunal.</p>
+      </div>
+      <div class="practice-card fade-up stagger-2"><i data-lucide="truck" class="practice-icon"></i>
+       <h3>Motor Accident Claims</h3>
+       <p>Comprehensive representation before Motor Accidents Claims Tribunals, securing rightful compensation for victims and their families with thorough case documentation.</p>
+      </div>
+      <div class="practice-card fade-up stagger-3"><i data-lucide="file-text" class="practice-icon"></i>
+       <h3>Notary &amp; Documentation</h3>
+       <p>Notarial services, legal drafting of agreements, affidavits, power of attorney, and statutory declarations with meticulous attention to legal form.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- ATTORNEYS -->
+   <section class="section-full attorneys-bg" id="attorneys">
+    <div class="section" style="padding-top:0; padding-bottom:3rem;">
+     <div class="section-eyebrow fade-up">
+      Legal Professionals
+     </div>
+     <h2 class="section-title fade-up stagger-1">Our Legal Team</h2>
+     <p class="section-desc fade-up stagger-2">A distinguished panel of advocates with specialised expertise, bound by an uncompromising ethic of integrity and client-first advocacy.</p>
+    </div>
+    <div style="max-width:1200px; margin:0 auto; padding:0 3rem 6rem;">
+     <div class="attorney-grid"><!-- Attorney 1 -->
+      <div class="attorney-card fade-up stagger-1">
+       <div class="attorney-photo">
+        <div class="attorney-photo-inner"><span class="attorney-initials">RS</span>
+        </div>
+        <div class="attorney-overlay"></div>
        </div>
-       <div class="team-info">
-        <div class="team-name">
-         Anjali Iyer
+       <div class="attorney-info">
+        <div class="attorney-name">
+         R. Subramaniam
         </div>
-        <div class="team-role">
-         Contract &amp; Commercial Law
+        <div class="attorney-title">
+         Senior Partner &amp; Founder
         </div>
-        <div class="team-spec">
-         10+ years in Corporate contracts &amp; negotiations
+        <div class="attorney-bar"></div>
+        <div class="attorney-spec">
+         LLB, LLM (Madras) · High Court Advocate · 28 Years of Practice<br>
+         Corporate Law · Constitutional Matters
+        </div>
+       </div>
+      </div><!-- Attorney 2 -->
+      <div class="attorney-card fade-up stagger-2">
+       <div class="attorney-photo">
+        <div class="attorney-photo-inner"><span class="attorney-initials">KP</span>
+        </div>
+        <div class="attorney-overlay"></div>
+       </div>
+       <div class="attorney-info">
+        <div class="attorney-name">
+         K. Priya Dharshini
+        </div>
+        <div class="attorney-title">
+         Partner — Family &amp; Civil
+        </div>
+        <div class="attorney-bar"></div>
+        <div class="attorney-spec">
+         LLB (PSG) · Family Courts Specialist · 14 Years<br>
+         Matrimonial Law · Child Custody
+        </div>
+       </div>
+      </div><!-- Attorney 3 -->
+      <div class="attorney-card fade-up stagger-3">
+       <div class="attorney-photo">
+        <div class="attorney-photo-inner"><span class="attorney-initials">VM</span>
+        </div>
+        <div class="attorney-overlay"></div>
+       </div>
+       <div class="attorney-info">
+        <div class="attorney-name">
+         V. Murugesan
+        </div>
+        <div class="attorney-title">
+         Associate — Criminal Defense
+        </div>
+        <div class="attorney-bar"></div>
+        <div class="attorney-spec">
+         LLB (Bharathiar) · Sessions Court Advocate · 9 Years<br>
+         Criminal Defense · Bail Matters
         </div>
        </div>
       </div>
      </div>
     </div>
-   </section><!-- Contact Section -->
-   <section class="contact-section" id="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="contact-container">
-     <div class="contact-info">
-      <div class="contact-item">
-       <div class="contact-icon">
-        <i data-lucide="phone" style="width: 24px; height: 24px;"></i>
+   </section><!-- TESTIMONIALS -->
+   <section class="section-full" id="testimonials" style="background:var(--navy);">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+     <div class="section-eyebrow fade-up">
+      Client Recognition
+     </div>
+     <h2 class="section-title fade-up stagger-1">Trusted by Our Clients</h2>
+     <p class="section-desc fade-up stagger-2">The measure of our practice is the trust our clients place in us during the most critical moments of their lives and businesses.</p>
+     <div class="testimonial-grid">
+      <div class="testimonial-card fade-up stagger-1">
+       <div class="quote-mark">
+        "
        </div>
-       <div class="contact-text">
-        <h3>Phone</h3>
-        <p id="contactPhone">+91 98765 43210</p>
+       <p class="testimonial-text">Mr. Subramaniam's command over corporate law and his sharp appellate strategy recovered substantial amounts in our commercial dispute. The level of professionalism and communication throughout was exceptional.</p>
+       <div class="testimonial-author">
+        A. Rajkumar
        </div>
-      </div>
-      <div class="contact-item">
-       <div class="contact-icon">
-        <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
-       </div>
-       <div class="contact-text">
-        <h3>Email</h3>
-        <p id="contactEmail">hello@lawfirm.com</p>
+       <div class="testimonial-role">
+        Managing Director, Textile Exports — Tirupur
        </div>
       </div>
-      <div class="contact-item">
-       <div class="contact-icon">
-        <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+      <div class="testimonial-card fade-up stagger-2">
+       <div class="quote-mark">
+        "
        </div>
-       <div class="contact-text">
-        <h3>Address</h3>
-        <p id="contactAddress">Coimbatore, Tamil Nadu, India</p>
+       <p class="testimonial-text">Ms. Priya Dharshini handled my family matter with extraordinary sensitivity and legal precision. Her guidance through the entire process gave me strength and clarity during a very difficult time.</p>
+       <div class="testimonial-author">
+        S. Meenakshi
+       </div>
+       <div class="testimonial-role">
+        Educator — Coimbatore
        </div>
       </div>
-      <div class="contact-item">
-       <div class="contact-icon">
-        <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+      <div class="testimonial-card fade-up stagger-3">
+       <div class="quote-mark">
+        "
        </div>
-       <div class="contact-text">
-        <h3>Hours</h3>
-        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-          Saturday: 10:00 AM - 2:00 PM</p>
+       <p class="testimonial-text">Their team resolved a twenty-year property title dispute in under two years. Meticulous documentation, strategic litigation, and complete transparency at every step of the proceedings.</p>
+       <div class="testimonial-author">
+        Dr. T. Krishnamoorthy
+       </div>
+       <div class="testimonial-role">
+        Retired IAS Officer — Race Course, Coimbatore
+       </div>
+      </div>
+      <div class="testimonial-card fade-up stagger-4">
+       <div class="quote-mark">
+        "
+       </div>
+       <p class="testimonial-text">We retained Subramaniam &amp; Associates for all our industrial labour matters. Their expertise before the Labour Tribunal is unmatched in Coimbatore district. A firm that truly understands business.</p>
+       <div class="testimonial-author">
+        B. Venkatesan
+       </div>
+       <div class="testimonial-role">
+        Chairman, BV Engineering Ltd. — Coimbatore
        </div>
       </div>
      </div>
-     <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-group">
-       <label for="name">Full Name</label> <input type="text" id="name" name="name" required placeholder="Your name">
-      </div>
-      <div class="form-group">
-       <label for="email">Email Address</label> <input type="email" id="email" name="email" required placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-       <label for="subject">Subject</label> <input type="text" id="subject" name="subject" required placeholder="What can we help with?">
-      </div>
-      <div class="form-group">
-       <label for="message">Message</label> <textarea id="message" name="message" required placeholder="Tell us about your legal needs..."></textarea>
-      </div><button type="submit" class="form-submit">Send Message</button>
-     </form>
     </div>
-   </section><!-- Footer -->
-   <footer>
-    <div class="footer-content">
-     <div class="footer-logo">
-      LAW FIRM
+   </section><!-- CONTACT -->
+   <section class="section-full contact-bg" id="contact">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+     <div class="section-eyebrow fade-up">
+      Reach Us
      </div>
-     <p class="footer-text">Justice. Integrity. Innovation.</p>
-     <p class="footer-text">Premium Legal Solutions in Coimbatore, Tamil Nadu</p>
-     <div class="footer-divider"></div>
-     <div class="footer-bottom">
-      <div>
-       © 2024 LAW FIRM. All rights reserved.
+     <h2 class="section-title fade-up stagger-1">Request a Consultation</h2>
+     <p class="section-desc fade-up stagger-2">All consultations are strictly confidential. Our team will respond within one business day.</p>
+     <div class="contact-grid"><!-- Info -->
+      <div class="fade-up stagger-1">
+       <div class="contact-detail"><i data-lucide="map-pin" class="contact-detail-icon"></i>
+        <div>
+         <div style="font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">
+          Office Address
+         </div>
+         <div class="contact-detail-text" id="contact-address-display">
+          14, Race Course Road,<br>
+          RS Puram, Coimbatore — 641 002,<br>
+          Tamil Nadu, India
+         </div>
+        </div>
+       </div>
+       <div class="contact-detail"><i data-lucide="phone" class="contact-detail-icon"></i>
+        <div>
+         <div style="font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">
+          Phone
+         </div>
+         <div class="contact-detail-text" id="contact-phone-display">
+          +91 422 2223344<br>
+          +91 98765 43210
+         </div>
+        </div>
+       </div>
+       <div class="contact-detail"><i data-lucide="mail" class="contact-detail-icon"></i>
+        <div>
+         <div style="font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">
+          Email
+         </div>
+         <div class="contact-detail-text" id="contact-email-display">
+          contact@subramaniam.law<br>
+          filings@subramaniam.law
+         </div>
+        </div>
+       </div>
+       <div class="contact-hours">
+        <h4>Office Hours</h4>
+        <p>Monday – Saturday: 9:30 AM – 6:00 PM<br>
+         Sunday: By Prior Appointment Only</p>
+       </div>
+       <div style="margin-top:2rem; padding:1.5rem; border:1px solid rgba(184,149,58,0.15); background:rgba(184,149,58,0.04);">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.6rem;"><i data-lucide="lock" style="width:14px;height:14px;color:var(--gold);"></i> <span style="font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Attorney-Client Privilege</span>
+        </div>
+        <p style="font-size:0.72rem;line-height:1.7;color:var(--slate);">All communications are protected by attorney-client privilege and are held in the strictest confidence in accordance with the Bar Council of India Rules, 1975.</p>
+       </div>
+      </div><!-- Form -->
+      <div class="contact-form fade-up stagger-2">
+       <div id="contact-form-inner">
+        <div style="font-family:'Cinzel',serif;font-size:0.85rem;font-weight:600;color:var(--white);margin-bottom:1.5rem;letter-spacing:0.04em;">
+         Confidential Enquiry Form
+        </div>
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+         <div class="form-row">
+          <div class="form-group"><label for="f-name">Full Name</label> <input type="text" id="f-name" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-group"><label for="f-phone">Contact Number</label> <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+          </div>
+         </div>
+         <div class="form-group"><label for="f-email">Email Address</label> <input type="email" id="f-email" placeholder="your@email.com" autocomplete="email">
+         </div>
+         <div class="form-group"><label for="f-matter">Nature of Matter</label> <select id="f-matter"> <option value="" disabled selected>Select practice area</option> <option>Corporate Litigation</option> <option>Civil Litigation</option> <option>Criminal Defense</option> <option>Family Law</option> <option>Real Estate &amp; Property</option> <option>Constitutional &amp; Writ</option> <option>Labour &amp; Employment</option> <option>Motor Accident Claims</option> <option>Other Legal Matter</option> </select>
+         </div>
+         <div class="form-group"><label for="f-message">Brief Description</label> <textarea id="f-message" placeholder="Please provide a brief, confidential description of your legal matter…"></textarea>
+         </div>
+         <div class="form-disclaimer"><i data-lucide="shield-check" style="width:14px;height:14px;color:var(--gold);margin-top:2px;flex-shrink:0;"></i> <span>Your enquiry is protected by attorney-client confidentiality from the moment of submission.</span>
+         </div><button type="submit" class="btn-primary" style="width:100%;" id="form-submit-btn">Submit Confidential Enquiry</button>
+        </form>
+       </div>
+       <div id="form-success" class="form-success"><i data-lucide="check-circle" style="width:48px;height:48px;color:var(--gold);margin:0 auto 1.2rem;display:block;"></i>
+        <div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--white);margin-bottom:0.6rem;">
+         Enquiry Received
+        </div>
+        <p style="font-size:0.78rem;line-height:1.8;color:var(--slate-light);">Thank you for reaching out. A member of our team will contact you within one business day. Your communication is held in the strictest confidence.</p>
+       </div>
       </div>
-      <div class="footer-links">
-       <a href="#privacy">Privacy Policy</a> <a href="#terms">Terms of Service</a> <a href="#disclaimer">Legal Disclaimer</a>
+     </div>
+    </div>
+   </section><!-- FOOTER -->
+   <footer class="footer">
+    <div class="footer-inner">
+     <div>
+      <div class="footer-logo" id="footer-firm-name">
+       Subramaniam <span>&amp; Associates</span>
+      </div>
+      <p class="footer-desc">Premier legal counsel for individuals, families, and corporations in Coimbatore and across Tamil Nadu since 1997.</p>
+      <div style="display:flex;gap:0.8rem;margin-top:1.5rem;">
+       <div style="width:28px;height:28px;border:1px solid rgba(184,149,58,0.25);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color 0.2s ease;" onmouseenter="this.style.borderColor='rgba(184,149,58,0.6)'" onmouseleave="this.style.borderColor='rgba(184,149,58,0.25)'"><i data-lucide="linkedin" style="width:13px;height:13px;color:var(--slate);"></i>
+       </div>
+      </div>
+     </div>
+     <div class="footer-col">
+      <h5>Practice Areas</h5>
+      <ul>
+       <li><a href="#practice">Corporate Litigation</a></li>
+       <li><a href="#practice">Criminal Defense</a></li>
+       <li><a href="#practice">Family Law</a></li>
+       <li><a href="#practice">Real Estate</a></li>
+       <li><a href="#practice">Constitutional Writs</a></li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>The Firm</h5>
+      <ul>
+       <li><a href="#attorneys">Our Attorneys</a></li>
+       <li><a href="#testimonials">Client Reviews</a></li>
+       <li><a href="#contact">Consultation</a></li>
+       <li><a href="#">Bar Council Registration</a></li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h5>Locate Us</h5>
+      <ul>
+       <li><a href="#">Race Course Road, RS Puram</a></li>
+       <li><a href="#">Coimbatore — 641 002</a></li>
+       <li><a href="#">Tamil Nadu, India</a></li>
+       <li><a href="#">+91 422 2223344</a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <div class="footer-copy">
+      © 2025 Subramaniam &amp; Associates. All rights reserved. | Licensed under the Advocates Act, 1961.
+     </div>
+     <div class="footer-bar"><span></span>
+      <div class="footer-copy">
+       Bar Council of Tamil Nadu &amp; Puducherry
       </div>
      </div>
     </div>
    </footer>
   </div>
   <script>
-    // Initialize Element SDK
-    const defaultConfig = {
-      firm_name: "LAW FIRM",
-      hero_title: "Justice Meets Innovation",
-      hero_subtitle: "Premium Legal Solutions for Corporate & Criminal Law",
-      tagline: "Integrity. Innovation. Impact.",
-      contact_phone: "+91 98765 43210",
-      contact_email: "hello@lawfirm.com",
-      contact_address: "Coimbatore, Tamil Nadu, India"
-    };
+  lucide.createIcons();
 
-    const config = { ...defaultConfig };
+  // Mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+  }
 
-    const elementConfig = {
-      defaultConfig,
-      onConfigChange: async (newConfig) => {
-        Object.assign(config, newConfig);
-        
-        document.getElementById('firmName').textContent = config.firm_name;
-        document.getElementById('heroTitle').textContent = config.hero_title;
-        document.getElementById('heroSubtitle').textContent = config.hero_subtitle;
-        document.getElementById('contactPhone').textContent = config.contact_phone;
-        document.getElementById('contactEmail').textContent = config.contact_email;
-        document.getElementById('contactAddress').textContent = config.contact_address;
-      },
-      mapToCapabilities: (cfg) => ({
-        recolorables: [],
-        borderables: [],
-        fontEditable: undefined,
-        fontSizeable: undefined
-      }),
-      mapToEditPanelValues: (cfg) => new Map([
-        ['firm_name', cfg.firm_name],
-        ['hero_title', cfg.hero_title],
-        ['hero_subtitle', cfg.hero_subtitle],
-        ['tagline', cfg.tagline],
-        ['contact_phone', cfg.contact_phone],
-        ['contact_email', cfg.contact_email],
-        ['contact_address', cfg.contact_address]
-      ])
-    };
-
-    if (window.elementSdk) {
-      window.elementSdk.init(elementConfig);
-    }
-
-    // Form submission
-    function handleSubmit(e) {
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
       e.preventDefault();
-      
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-      };
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-      const form = e.target;
-      const submitBtn = form.querySelector('.form-submit');
-      const originalText = submitBtn.textContent;
-      
-      // Show success feedback
-      submitBtn.textContent = '✓ Message Sent Successfully!';
-      submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-      submitBtn.style.boxShadow = '0 8px 25px rgba(16, 185, 129, 0.4)';
-      
-      form.reset();
-      
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.style.background = '';
-        submitBtn.style.boxShadow = '';
-      }, 3000);
-    }
+  // Scroll-triggered animations
+  const appRoot = document.querySelector('.app-root');
+  function checkVisible() {
+    const animEls = document.querySelectorAll('.fade-up, .fade-in');
+    animEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.88) {
+        el.classList.add('visible');
+      }
+    });
+  }
 
-    // Initialize Lucide icons
-    document.addEventListener('DOMContentLoaded', () => {
+  appRoot.addEventListener('scroll', checkVisible);
+  window.addEventListener('scroll', checkVisible);
+  checkVisible();
+
+  // Trigger hero animations immediately
+  setTimeout(() => {
+    document.querySelectorAll('.hero-content .fade-up').forEach(el => el.classList.add('visible'));
+    document.querySelectorAll('.trust-banner .fade-in').forEach(el => el.classList.add('visible'));
+  }, 200);
+
+  // Form submission
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('form-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+    btn.style.opacity = '0.7';
+    setTimeout(() => {
+      document.getElementById('contact-form-inner').style.display = 'none';
+      const success = document.getElementById('form-success');
+      success.style.display = 'block';
       lucide.createIcons();
-    });
+    }, 1200);
+  }
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+  // Element SDK
+  const defaultConfig = {
+    firm_name: "Subramaniam & Associates",
+    hero_tagline: "Unwavering Advocacy. Proven Results in Tamil Nadu.",
+    hero_subtext: "Premier legal representation across civil, corporate, and criminal matters. Decades of experience before the Madurai High Court Bench and Coimbatore District Courts.",
+    cta_button_text: "Request a Confidential Consultation",
+    contact_address: "14, Race Course Road,\nRS Puram, Coimbatore — 641 002,\nTamil Nadu, India",
+    contact_phone: "+91 422 2223344\n+91 98765 43210",
+    contact_email: "contact@subramaniam.law\nfilings@subramaniam.law",
+    background_color: "#0a1628",
+    surface_color: "#112240",
+    text_color: "#f4f4f2",
+    gold_color: "#b8953a",
+    slate_color: "#8892a4",
+    font_family: "Cinzel",
+    font_size: 16
+  };
+
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange: async (config) => {
+      const firmName = config.firm_name || defaultConfig.firm_name;
+      const tagline = config.hero_tagline || defaultConfig.hero_tagline;
+      const subtext = config.hero_subtext || defaultConfig.hero_subtext;
+      const ctaText = config.cta_button_text || defaultConfig.cta_button_text;
+      const address = config.contact_address || defaultConfig.contact_address;
+      const phone = config.contact_phone || defaultConfig.contact_phone;
+      const email = config.contact_email || defaultConfig.contact_email;
+
+      // Firm name
+      const navLogo = document.getElementById('nav-logo-text');
+      if (navLogo) {
+        const parts = firmName.split('&');
+        navLogo.innerHTML = parts.length > 1
+          ? `${parts[0].trim()} <span>& ${parts.slice(1).join('&').trim()}</span>`
+          : firmName;
+      }
+      const footerName = document.getElementById('footer-firm-name');
+      if (footerName) {
+        const parts = firmName.split('&');
+        footerName.innerHTML = parts.length > 1
+          ? `${parts[0].trim()} <span>& ${parts.slice(1).join('&').trim()}</span>`
+          : firmName;
+      }
+
+      // Hero
+      const heroTitle = document.getElementById('hero-main-title');
+      if (heroTitle) heroTitle.textContent = tagline;
+
+      const heroSub = document.getElementById('hero-sub-text');
+      if (heroSub) heroSub.textContent = subtext;
+
+      const heroCta = document.getElementById('hero-cta-btn');
+      if (heroCta) heroCta.textContent = ctaText;
+
+      const navCta = document.getElementById('nav-cta-btn');
+      if (navCta) navCta.textContent = 'Consultation';
+
+      // Contact
+      const addrEl = document.getElementById('contact-address-display');
+      if (addrEl) addrEl.innerHTML = address.replace(/\n/g, '<br>');
+      const phoneEl = document.getElementById('contact-phone-display');
+      if (phoneEl) phoneEl.innerHTML = phone.replace(/\n/g, '<br>');
+      const emailEl = document.getElementById('contact-email-display');
+      if (emailEl) emailEl.innerHTML = email.replace(/\n/g, '<br>');
+
+      // Colors
+      const bg = config.background_color || defaultConfig.background_color;
+      const surface = config.surface_color || defaultConfig.surface_color;
+      const textCol = config.text_color || defaultConfig.text_color;
+      const gold = config.gold_color || defaultConfig.gold_color;
+      const slate = config.slate_color || defaultConfig.slate_color;
+
+      document.body.style.background = bg;
+      document.documentElement.style.setProperty('--navy', bg);
+      document.documentElement.style.setProperty('--navy-mid', surface);
+      document.documentElement.style.setProperty('--white', textCol);
+      document.documentElement.style.setProperty('--gold', gold);
+      document.documentElement.style.setProperty('--slate', slate);
+
+      // Font
+      const font = config.font_family || defaultConfig.font_family;
+      const size = config.font_size || defaultConfig.font_size;
+      const fallback = 'Georgia, serif';
+      document.querySelectorAll('h1,h2,h3,.serif,.hero-title,.section-title,.attorney-name,.nav-logo,.footer-logo,.trust-number').forEach(el => {
+        el.style.fontFamily = `${font}, ${fallback}`;
+        el.style.fontSize = '';
       });
-    });
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e2f3125760fae3d',t:'MTc3NDYyMjg2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+      document.getElementById('hero-main-title').style.fontSize = `${size * 2.2}px`;
+      document.querySelectorAll('.section-title').forEach(el => { el.style.fontSize = `${size * 1.5}px`; });
+      document.querySelectorAll('.trust-number').forEach(el => { el.style.fontSize = `${size * 1.4}px`; });
+    },
+    mapToCapabilities: (config) => ({
+      recolorables: [
+        {
+          get: () => config.background_color || defaultConfig.background_color,
+          set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+        },
+        {
+          get: () => config.surface_color || defaultConfig.surface_color,
+          set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+        },
+        {
+          get: () => config.text_color || defaultConfig.text_color,
+          set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+        },
+        {
+          get: () => config.gold_color || defaultConfig.gold_color,
+          set: (v) => { config.gold_color = v; window.elementSdk.setConfig({ gold_color: v }); }
+        },
+        {
+          get: () => config.slate_color || defaultConfig.slate_color,
+          set: (v) => { config.slate_color = v; window.elementSdk.setConfig({ slate_color: v }); }
+        }
+      ],
+      borderables: [],
+      fontEditable: {
+        get: () => config.font_family || defaultConfig.font_family,
+        set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+      },
+      fontSizeable: {
+        get: () => config.font_size || defaultConfig.font_size,
+        set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+      }
+    }),
+    mapToEditPanelValues: (config) => new Map([
+      ['firm_name', config.firm_name || defaultConfig.firm_name],
+      ['hero_tagline', config.hero_tagline || defaultConfig.hero_tagline],
+      ['hero_subtext', config.hero_subtext || defaultConfig.hero_subtext],
+      ['cta_button_text', config.cta_button_text || defaultConfig.cta_button_text],
+      ['contact_address', config.contact_address || defaultConfig.contact_address],
+      ['contact_phone', config.contact_phone || defaultConfig.contact_phone],
+      ['contact_email', config.contact_email || defaultConfig.contact_email]
+    ])
+  });
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e38d4b6b4a2a27c',t:'MTc3NDcyMzkzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
